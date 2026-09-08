@@ -14,7 +14,7 @@ def split_to_chunks(full_text: str, chunk_size: int=300, overlap: int=100) -> li
             start += chunk_size - overlap
         return chunks
 
-def chunk_all_documents(processed_dir, str = "data/processed"):
+def chunk_all_documents(processed_dir: str = "data/processed"):
     all_chunks = []
     for filename in os.listdir(processed_dir):
         filepath = os.path.join(processed_dir, filename)
